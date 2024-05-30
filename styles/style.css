@@ -66,7 +66,7 @@
   height: 26px;
   background-color: inherit;
   text-transform: lowercase;
-  color: var(--bt-color, #ff0070);
+  color: var(--accent-color, #ff0070);
   border: 0;
   cursor: pointer;
 }
@@ -79,7 +79,7 @@
 
 .header__theme-menu-button:focus {
   border: none;
-  border-bottom: 1px solid var(--bt-color, #ff0070);
+  border-bottom: 1px solid var(--accent-color, #ff0070);
   margin: 0;
 }
 
@@ -91,14 +91,14 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--bt-color-active, rgba(255, 0, 112));
+  border: 1px solid var(--accent-color, rgba(255, 0, 112));
 }
 
 .header__title {
   font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   color: var(--title-color, #db00ff);
   text-shadow: 4px 4px 0px var(--accent-color, #ff0070);
-  line-height: 0.825;
+  line-height: 82.5%;
 }
 
 .decorated-zone::before {
@@ -106,8 +106,8 @@
   width: 25px;
   height: 25px;
   justify-self: end;
-  border-right: 1px solid var(--bt-color, #ff0070);
-  border-top: 1px solid var(--bt-color, #ff0070);
+  border-right: 1px solid var(--accent-color, #ff0070);
+  border-top: 1px solid var(--accent-color, #ff0070);
 }
 
 .header::before {
@@ -119,8 +119,8 @@
   width: 25px;
   height: 25px;
   margin-top: auto;
-  border-left: 1px solid var(--bt-color, #ff0070);
-  border-bottom: 1px solid var(--bt-color, #ff0070);
+  border-left: 1px solid var(--accent-color, #ff0070);
+  border-bottom: 1px solid var(--accent-color, #ff0070);
 }
 
 .header__description {
@@ -369,22 +369,22 @@ h2 + .title-decor,
   .main__section-header {
     margin-bottom: 0;
   }
-
-  .main__section-header + .title-decor {
-    margin-left: 7px;
-  }
-
+  
   .main__section-second > .main__section-header {
     inline-size: 315px;
     grid-row: auto;
   }
 
-  .main__section-other > .main__section-article {
+  .main__section-second > .main__section-article {
     grid-column-start: auto;
     grid-row-start: 2;
   }
 
   .main__section-article {
     padding-left: 7px;
+  }
+
+  .main__section-header + .title-decor {
+    margin-left: 7px;
   }
 }

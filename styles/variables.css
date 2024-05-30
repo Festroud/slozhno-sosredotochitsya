@@ -10,9 +10,7 @@
   --font-weight-bold: 700;
   --rec: "rec";
   --record: block;
-  --bt-color: #ff0070;
   --bt-color-shadow: rgba(255, 0, 112, 0.4);
-  --bt-color-active: #ff0070;
   --small-gap: 10px;
   --middle-gap: 20px;
 }
