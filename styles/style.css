@@ -38,16 +38,16 @@
 
 .rec-decor::after {
   content: "";
-    position: absolute;
-    display: var(--record);
-    width: 9px;
-    height: 9px;
-    vertical-align: middle;
-    border-radius: 50%;
-    background: #ff0070;
-    box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
-    margin: 8px 8px 0 10px;
-    flex-shrink: 0;
+  position: absolute;
+  display: var(--record);
+  width: 9px;
+  height: 9px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #ff0070;
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
+  margin: 8px 8px 0 10px;
+  flex-shrink: 0;
 }
 
 .header__theme-menu {
@@ -185,7 +185,7 @@ h2 + .title-decor,
 .main__section-pictures {
   display: flex;
   flex-direction: column;
-  gap: var(--small-gap);;
+  gap: var(--small-gap);
   margin-block-end: 40px;
 }
 
