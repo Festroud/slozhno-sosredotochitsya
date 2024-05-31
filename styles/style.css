@@ -14,7 +14,7 @@
 /* //////////////// HEADER  \\\\\\\\\\\\\\\\\\ */
 
 .header {
-  min-height: 100vh;
+  min-height: 668px;
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr;
@@ -63,7 +63,8 @@
 
 .header__theme-menu-button {
   width: 70px;
-  height: 26px;
+  /* height: 26px; */
+  padding: 1px;
   background-color: inherit;
   text-transform: lowercase;
   color: var(--accent-color, #ff0070);
