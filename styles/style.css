@@ -63,36 +63,32 @@
 
 .header__theme-menu-button {
   width: 70px;
-  /* height: 26px; */
   padding: 1px;
   background-color: inherit;
   text-transform: lowercase;
-  color: var(--accent-color, #ff0070);
+  color: var(--bt-color, #ff0070);
   border: 0;
   cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--bt-color-shadow, rgba(255, 0, 112, 0.4));
-  transition: width 300ms, background-color 0.5s;
+  border: 1px solid var(--bt-color-shadow, rgbа(255, 0, 112, 0.4));
+  border-radius: 0;
   margin: 0;
 }
 
 .header__theme-menu-button:focus {
-  border: none;
-  border-bottom: 1px solid var(--accent-color, #ff0070);
-  margin: 0;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
-  border: none;
-  border-bottom: 1px solid rgb(255, 242, 0);
-  margin: 0;
+  border-block-end: 1px solid var(--bt-color, #ff0070);
 }
 
-.header__theme-menu-button_active {
+.header__theme-menu-button_active,
+.header__theme-menu-button_active:hover {
   pointer-events: none;
-  border: 1px solid var(--accent-color, rgba(255, 0, 112));
+  border: 1px solid var(--bt-color-active, rgba(255, 0, 112));
 }
 
 .header__title {
@@ -107,8 +103,8 @@
   width: 25px;
   height: 25px;
   justify-self: end;
-  border-right: 1px solid var(--accent-color, #ff0070);
-  border-top: 1px solid var(--accent-color, #ff0070);
+  border-right: 1px solid var(--bt-color, #ff0070);
+  border-top: 1px solid var(--bt-color, #ff0070);
 }
 
 .header::before {
@@ -120,8 +116,8 @@
   width: 25px;
   height: 25px;
   margin-top: auto;
-  border-left: 1px solid var(--accent-color, #ff0070);
-  border-bottom: 1px solid var(--accent-color, #ff0070);
+  border-left: 1px solid var(--bt-color, #ff0070);
+  border-bottom: 1px solid var(--bt-color, #ff0070);
 }
 
 .header__description {
@@ -171,15 +167,24 @@ h2 + .title-decor,
 
 .text-link {
   text-decoration: none;
-  text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
+  text-shadow: 2px 1px 0px var(--accent-color, #ff0070);
 }
 
-.text-link:focus {
-  border: 1px solid var(--text-color, #f1b2ce);
+.text-link:focus,
+.text-link:focus-visible {
+  outline: 1px solid var(--text-color, #f1b2ce);
 }
 
 .text-link:hover {
-  border-bottom: 1px solid var(--text-color, #f1b2ce);
+  outline: none;
+  text-decoration: underline;
+}
+
+/* пробовал через псевдоклассы и через вложенные селекторы, но ничего не получилось. Каждый раз margin убирался у всех <p>,а не только у последнего */
+/* И честно говоря я не совсем понял нужно ли было убирать margin у всех <p> во второй секции или только у последнего, и если менять разрешение, то они становятся в ряд */
+/* В общем-то решил добавить еще классы и более менее получилось, хотя это не совсем верное решение, если нужно будет добавлять новые <p> */
+.last__paragraph {
+  margin-bottom: 0;;
 }
 
 /* //////////////// PICTURE  \\\\\\\\\\\\\\\\\\ */
@@ -337,6 +342,10 @@ h2 + .title-decor,
   .footer__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
+
+  .other__size {
+    padding-top: 20px;
+  }
 }
 
 @media (width >= 1024px) {
@@ -387,5 +396,9 @@ h2 + .title-decor,
 
   .main__section-header + .title-decor {
     margin-left: 7px;
+  }
+
+  .other__size {
+    padding-top: 20px;
   }
 }
